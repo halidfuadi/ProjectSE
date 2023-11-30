@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* header */
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(50, 50, 50, 0.7), rgba(4, 9, 30, 0.7)), url(assets/buybackground.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px; 
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    margin: auto;
+    transition: 0,5;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+@media(max-width: 700px){
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background-color: rgb(79, 79, 79);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+    nav .menu{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+/* CONTENT */
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar{
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    margin-left: 24%;
+    margin-bottom: 60px;
+    background-color: white;
+}
+
+.searchbar input{
+    flex: 1;
+    outline: none;
+    padding: 18px 0px;
+    font-size: 20px;
+    color: #414141;
+}
+
+:placeholder{
+    color: #414141;
+}
+
+.searchbar button img{
+    width: 25px;
+}
+
+.searchbar button img{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: rgb(112, 112, 112);
+    cursor: pointer;
+}
+
+.usedCars{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    border-radius: 10px;
+    background-color: gray;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.usedCars h1{
+    font-size: 36px;
+    font-weight: 600;
+    padding: 50px;
+    color: white;
+}
+
+.used-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.usedCar-col{
+    flex-basis: 16%;
+    background: rgb(111, 111, 111);
+    border-radius: 10px;
+    margin-bottom: 1%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.usedCar-col title {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px ;
+}
+
+.usedCars h3{
+    color: white;
+}
+
+.usedCar-col img{
+    width: 170px;
+    padding: 10PX;
+    
+}
+
+.usedCar-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 1);
+}
+
+.usedCars a{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.usedCars .usedCar-col a{
+    font-size: 18px;
+}
+
+.usedCars a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    margin: auto;
+    transition: 0,5;
+}
+
+.usedCars a:hover::after{
+    width: 100%;
+}
+
+@media(max-width: 700px){
+    .used-row{
+        flex-direction: column;
+    }
+}
+
+.button p{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    background-color: rgb(0, 0, 0);
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.button p:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 1);
+}
+
+/* FOOTER */
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: rgb(111, 111, 111);
+}
+
+.footer h2{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 100;
+}
+
+.footer img{
+    width: 30px;
+    padding: auto;
+}
+
+.footer a{
+    text-decoration: none;
+}
